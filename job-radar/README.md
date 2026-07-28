@@ -50,59 +50,20 @@ Armadilhas descobertas na validação, hoje cobertas por teste:
 
 ## Arquitetura
 
-```mermaid
-flowchart TB
-    EB["EventBridge Scheduler<br/><i>cron por fonte</i>"]
-    DISC["<b>discovery λ</b><br/><i>lê o registro de fontes</i>"]
-    QF["SQS fetch-queue"]
-    DLQF["DLQ"]
-    SRC["Fontes externas<br/><i>Gupy · Greenhouse · Lever · Ashby · …</i>"]
-    FETCH["<b>fetch λ</b> — camada 1 (client)<br/><i>HTTP · timeout · ETag/If-None-Match<br/>circuit breaker por fonte</i>"]
-    S3[("S3 — zona raw<br/><i>payload bruto</i>")]
-    QN["SQS normalize-queue"]
-    DLQN["DLQ"]
-    NORM["<b>normalize λ</b> — camada 2 (ACL)<br/><i>DTO da fonte → JobPosting canônica<br/>contentHash · fingerprint</i>"]
-    DDB[("DynamoDB<br/><i>system of record</i>")]
-    STREAM["DynamoDB Streams"]
-    OSP["projetor → OpenSearch<br/><i>fatia 3</i>"]
-    MATCH["matcher de alertas<br/><i>fatia 5</i>"]
+<img src="docs/arquitetura-ingestao.svg" alt="Pipeline de ingestão: agenda → discovery → fetch → normalize → catálogo, com o desvio pelo S3 e o gate de contentHash" width="100%">
 
-    EB --> DISC
-    DISC -->|"1 msg por seletor/página"| QF
-    QF --> FETCH
-    QF -.->|"após 5 tentativas"| DLQF
-    FETCH <-->|"HTTP GET"| SRC
-    FETCH -->|"próxima página<br/><i>enquanto vier cheia</i>"| QF
-    FETCH -->|"grava o corpo"| S3
-    FETCH -->|"claim-check:<br/>ponteiro, não o corpo"| QN
-    S3 -->|"lê o bruto"| NORM
-    QN --> NORM
-    QN -.->|"após 5 tentativas"| DLQN
-    NORM -->|"upsert condicional"| DDB
-    DDB --> STREAM
-    STREAM -.->|"só se contentHash mudou"| OSP
-    STREAM -.->|"só se contentHash mudou"| MATCH
+O diagrama é conceitual: mostra os estágios e as decisões, não cada recurso da
+AWS. As filas SQS e suas DLQs ficam implícitas nas setas do spine — elas são
+transporte, e desenhá-las dobraria o número de caixas sem acrescentar ideia.
 
-    classDef lambda fill:#fef3c7,stroke:#b45309,color:#1f2937
-    classDef queue fill:#e0e7ff,stroke:#4338ca,color:#1f2937
-    classDef store fill:#d1fae5,stroke:#047857,color:#1f2937
-    classDef dlq fill:#fee2e2,stroke:#b91c1c,color:#1f2937
-    classDef future fill:#f3f4f6,stroke:#9ca3af,color:#374151
-    classDef ext fill:#ede9fe,stroke:#6d28d9,color:#1f2937
+Duas arestas carregam as decisões menos óbvias. A curva verde que **volta** para
+`fetch` é a paginação: ela se resolve no fetch, não no discovery, porque nenhuma
+das fontes diz quantas páginas existem antes da primeira resposta. E o desvio
+pela **zona raw entre fetch e normalize** é o claim-check: o corpo não trafega
+pela fila, só o ponteiro.
 
-    class DISC,FETCH,NORM lambda
-    class QF,QN,STREAM queue
-    class S3,DDB store
-    class DLQF,DLQN dlq
-    class OSP,MATCH future
-    class SRC,EB ext
-```
-
-Duas arestas do diagrama carregam as decisões menos óbvias do pipeline. A que
-**volta** de `fetch λ` para a própria fila é a paginação: ela se resolve no
-fetch, não no discovery, porque nenhuma das fontes diz quantas páginas existem
-antes da primeira resposta. E o desvio pelo **S3 entre fetch e normalize** é o
-claim-check: o corpo não trafega pela fila, só o ponteiro.
+O gate no fim é o que faz o sistema ser barato: sem ele, toda rodada diária
+reindexaria e re-alertaria o catálogo inteiro.
 
 ### Decisões que valem explicar
 
@@ -159,6 +120,7 @@ packages/adapters/     clients (camada 1) + ACLs (camada 2) por fonte
 packages/infra-aws/    DynamoDB, S3, SQS — implementam as ports do core
 apps/ingestion/        handlers Lambda + composition root
 infra/                 stack CDK
+docs/                  diagramas
 fixtures/              payloads reais gravados, por fonte
 ```
 
