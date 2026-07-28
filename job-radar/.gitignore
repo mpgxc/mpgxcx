@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.tsbuildinfo
+cdk.out/
+.cdk.staging/
+coverage/
+.env
+.env.*
+!.env.example
+.DS_Store
+.localstack/
+.dynamodb-local/

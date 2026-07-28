@@ -1,0 +1,34 @@
+services:
+  # A pipeline roda inteira sem isto (ver `pnpm pipeline:local`, que usa ports
+  # em memória). Estes serviços existem para exercitar os adapters AWS de
+  # verdade — layout de tabela, chaves do GSI, formato das mensagens.
+  dynamodb:
+    image: amazon/dynamodb-local:2.5.2
+    command: ["-jar", "DynamoDBLocal.jar", "-sharedDb", "-dbPath", "/data"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./.dynamodb-local:/data
+    working_dir: /home/dynamodblocal
+
+  localstack:
+    image: localstack/localstack:4.0
+    ports:
+      - "4566:4566"
+    environment:
+      SERVICES: s3,sqs
+      DEBUG: "0"
+      AWS_DEFAULT_REGION: us-east-1
+    volumes:
+      - ./.localstack:/var/lib/localstack
+
+  # Índice de busca. Em produção é OpenSearch Serverless (coleção NextGen, que
+  # escala a zero); localmente, o OpenSearch de sempre fala o mesmo protocolo.
+  opensearch:
+    image: opensearchproject/opensearch:2.18.0
+    environment:
+      discovery.type: single-node
+      DISABLE_SECURITY_PLUGIN: "true"
+      OPENSEARCH_JAVA_OPTS: "-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
