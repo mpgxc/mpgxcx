@@ -50,27 +50,59 @@ Armadilhas descobertas na validação, hoje cobertas por teste:
 
 ## Arquitetura
 
+```mermaid
+flowchart TB
+    EB["EventBridge Scheduler<br/><i>cron por fonte</i>"]
+    DISC["<b>discovery λ</b><br/><i>lê o registro de fontes</i>"]
+    QF["SQS fetch-queue"]
+    DLQF["DLQ"]
+    SRC["Fontes externas<br/><i>Gupy · Greenhouse · Lever · Ashby · …</i>"]
+    FETCH["<b>fetch λ</b> — camada 1 (client)<br/><i>HTTP · timeout · ETag/If-None-Match<br/>circuit breaker por fonte</i>"]
+    S3[("S3 — zona raw<br/><i>payload bruto</i>")]
+    QN["SQS normalize-queue"]
+    DLQN["DLQ"]
+    NORM["<b>normalize λ</b> — camada 2 (ACL)<br/><i>DTO da fonte → JobPosting canônica<br/>contentHash · fingerprint</i>"]
+    DDB[("DynamoDB<br/><i>system of record</i>")]
+    STREAM["DynamoDB Streams"]
+    OSP["projetor → OpenSearch<br/><i>fatia 3</i>"]
+    MATCH["matcher de alertas<br/><i>fatia 5</i>"]
+
+    EB --> DISC
+    DISC -->|"1 msg por seletor/página"| QF
+    QF --> FETCH
+    QF -.->|"após 5 tentativas"| DLQF
+    FETCH <-->|"HTTP GET"| SRC
+    FETCH -->|"próxima página<br/><i>enquanto vier cheia</i>"| QF
+    FETCH -->|"grava o corpo"| S3
+    FETCH -->|"claim-check:<br/>ponteiro, não o corpo"| QN
+    S3 -->|"lê o bruto"| NORM
+    QN --> NORM
+    QN -.->|"após 5 tentativas"| DLQN
+    NORM -->|"upsert condicional"| DDB
+    DDB --> STREAM
+    STREAM -.->|"só se contentHash mudou"| OSP
+    STREAM -.->|"só se contentHash mudou"| MATCH
+
+    classDef lambda fill:#fef3c7,stroke:#b45309,color:#1f2937
+    classDef queue fill:#e0e7ff,stroke:#4338ca,color:#1f2937
+    classDef store fill:#d1fae5,stroke:#047857,color:#1f2937
+    classDef dlq fill:#fee2e2,stroke:#b91c1c,color:#1f2937
+    classDef future fill:#f3f4f6,stroke:#9ca3af,color:#374151
+    classDef ext fill:#ede9fe,stroke:#6d28d9,color:#1f2937
+
+    class DISC,FETCH,NORM lambda
+    class QF,QN,STREAM queue
+    class S3,DDB store
+    class DLQF,DLQN dlq
+    class OSP,MATCH future
+    class SRC,EB ext
 ```
-EventBridge Scheduler (cron por fonte)
-   │
-   ▼
-[discovery λ] ── lê o registro de fontes no DynamoDB
-   │            emite 1 msg por unidade de trabalho {fonte, seletor, página}
-   ▼
-SQS fetch-queue ──DLQ
-   │
-   ▼
-[fetch λ] ── camada 1 (client): HTTP, timeout, ETag/If-None-Match,
-   │          circuit breaker por fonte. Grava o bruto no S3.
-   ▼         Emite o PONTEIRO (claim-check), não o corpo.
-SQS normalize-queue ──DLQ
-   │
-   ▼
-[normalize λ] ── camada 2 (ACL): DTO da fonte → JobPosting canônica,
-   │              contentHash, chave de dedup. Upsert no DynamoDB.
-   ▼
-DynamoDB Streams ──▶ projetor OpenSearch · matcher de alertas   (fatias 3 e 5)
-```
+
+Duas arestas do diagrama carregam as decisões menos óbvias do pipeline. A que
+**volta** de `fetch λ` para a própria fila é a paginação: ela se resolve no
+fetch, não no discovery, porque nenhuma das fontes diz quantas páginas existem
+antes da primeira resposta. E o desvio pelo **S3 entre fetch e normalize** é o
+claim-check: o corpo não trafega pela fila, só o ponteiro.
 
 ### Decisões que valem explicar
 
