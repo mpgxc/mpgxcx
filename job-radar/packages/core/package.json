@@ -1,0 +1,11 @@
+{
+  "name": "@job-radar/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./commons": "./src/commons/index.ts",
+    "./ingestion": "./src/contexts/ingestion/index.ts"
+  }
+}
