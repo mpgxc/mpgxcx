@@ -28,6 +28,42 @@
 
 ---
 
+## Emendas pós-validação (Task 2 executada em 2026-07-29)
+
+O spike da Task 2 mediu a fonte real e **derrubou três suposições** deste plano.
+As tasks seguintes valem com estas emendas; a evidência está em
+`docs/validacao-google-news.md` no repo do projeto.
+
+1. **`stripPublisherSuffix` ganha o veículo.** Em 200/200 itens o sufixo do
+   `<title>` é *exatamente* o texto de `<source>`. Assinatura passa a
+   `stripPublisherSuffix(title: string, publisher?: string): string` — corta
+   `" - " + publisher` exato quando conhecido, e cai no último `" - "` como
+   fallback (fonte feed-driven não tem `<source>`). Consequentemente
+   `normalizeHeadline(title, publisher?)` e
+   `Article.buildFingerprint(props)` — não mais `buildFingerprint(title)`.
+
+2. **O haystack de match inclui o veículo, de propósito.** `evaluateMatch` monta
+   `título + resumo + veículo`. Achado com um caso real na fixture
+   (`Olhares de Lisboa` dispara `exclude: ["lisboa"]`, corretamente), e o
+   inverso vale para veículos piauienses no `boost`.
+
+3. **O mapper do Google News mapeia `summary = ""`.** Medido: 0 de 200
+   `<description>` trazem qualquer coisa além do título mais o veículo. Copiar
+   aquilo duplicaria o título dentro do `contentHash`. O parser genérico
+   continua extraindo `description` — quem descarta é o ACL, que é onde
+   peculiaridade de fonte deve morar.
+
+4. **A regra do perfil `oeiras-pi` foi recalibrada contra manchete real.** A do
+   spec §6 rejeitava 31 de 62 notícias legítimas de Oeiras/PI. A versão
+   calibrada (55 de 62, ~89% de recall) está na §5.3 do doc de validação e é a
+   que a Task 10b deve usar.
+
+5. **A fonte não manda `ETag` nem `Last-Modified`** (`cache-control: no-store`).
+   O ramo `not-modified` do `fetch` é código morto para o Google News e caminho
+   quente para a fatia 2. Mantido.
+
+---
+
 ## Estrutura de arquivos
 
 ```
