@@ -21,6 +21,20 @@ export interface IngestionStackProps extends StackProps {
   /** Cron da rodada de coleta. Padrão: diariamente às 06:00 UTC (03:00 BRT). */
   readonly schedule?: events.Schedule;
   /**
+   * Cron da varredura de expiração. Padrão: 10:00 UTC (07:00 BRT).
+   *
+   * Quatro horas depois da coleta, e a folga é dimensionada, não chutada: o
+   * caminho mais longo é uma tarefa de fetch que esgota as 5 entregas com
+   * `visibilityTimeout` de 6 minutos (~30 min) e, como a paginação é serial e o
+   * fetch tem concorrência reservada em 2, cada página descoberta reinicia essa
+   * conta. Quatro horas cobrem centenas de páginas com margem.
+   *
+   * Errar para mais é barato: o sweeper que roda cedo demais vê a rodada
+   * incompleta e simplesmente não expira. Errar para menos, todo dia, é o que
+   * faria a expiração nunca acontecer.
+   */
+  readonly sweepSchedule?: events.Schedule;
+  /**
    * Teto de execuções simultâneas do fetch.
    *
    * É o token bucket do sistema: em serverless, reservar concorrência é o jeito
@@ -157,11 +171,24 @@ export class IngestionStack extends Stack {
       description: "Normaliza o payload bruto em JobPosting e persiste",
     });
 
+    const sweeperFn = new nodejs.NodejsFunction(this, "SweeperFn", {
+      ...defaults,
+      entry: `${APP_ROOT}sweeper.handler.ts`,
+      handler: "handler",
+      // Varrer é uma Query no GSI1 seguida de um UpdateItem por vaga órfã. Num
+      // dia em que uma empresa grande fecha o board, isso é lento — mas nunca
+      // paralelo, para não competir por capacidade com a coleta.
+      timeout: Duration.minutes(15),
+      description: "Expira as vagas que a última rodada íntegra não devolveu",
+    });
+
     // ---- Ligações ----------------------------------------------------------
 
     table.grantReadWriteData(discoveryFn);
     table.grantReadWriteData(fetchFn);
     table.grantReadWriteData(normalizeFn);
+    // Lê o placar da rodada e o GSI1; escreve o status EXPIRED nas vagas órfãs.
+    table.grantReadWriteData(sweeperFn);
 
     rawBucket.grantWrite(fetchFn);
     rawBucket.grantRead(normalizeFn);
@@ -190,6 +217,12 @@ export class IngestionStack extends Stack {
       schedule: props.schedule ?? events.Schedule.cron({ minute: "0", hour: "6" }),
       targets: [new targets.LambdaFunction(discoveryFn)],
       description: "Dispara a rodada diária de coleta de vagas",
+    });
+
+    new events.Rule(this, "SweepSchedule", {
+      schedule: props.sweepSchedule ?? events.Schedule.cron({ minute: "0", hour: "10" }),
+      targets: [new targets.LambdaFunction(sweeperFn)],
+      description: "Expira vagas não vistas na última rodada íntegra",
     });
   }
 }

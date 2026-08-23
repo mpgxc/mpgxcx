@@ -6,6 +6,8 @@ import {
   JobRepository,
   type RawObjectRef,
   RawStorage,
+  type RunCounters,
+  RunRegistry,
   type SourceConfig,
   SourceRegistry,
   type UpsertOutcome,
@@ -82,6 +84,51 @@ export class InMemoryJobRepository extends JobRepository {
       expired += 1;
     }
     return expired;
+  }
+}
+
+/**
+ * Placar da rodada em memória.
+ *
+ * Os incrementos aqui são triviais porque JavaScript é single-threaded — o que
+ * NÃO significa que o adapter real possa ler-modificar-escrever: lá são
+ * processos concorrentes, e é por isso que o DynamoDB usa `ADD`.
+ */
+export class InMemoryRunRegistry extends RunRegistry {
+  private readonly runs = new Map<
+    string,
+    { completed: number; failed: number; startedAt: string }
+  >();
+  private readonly pointers = new Map<string, string>();
+
+  async startRun(runId: string, sourceIds: readonly string[]): Promise<void> {
+    this.open(runId);
+    for (const sourceId of sourceIds) this.pointers.set(sourceId, runId);
+  }
+
+  async recordSuccess(runId: string, _sourceId: string): Promise<void> {
+    this.open(runId).completed += 1;
+  }
+
+  async recordFailure(runId: string, _sourceId: string): Promise<void> {
+    this.open(runId).failed += 1;
+  }
+
+  async get(runId: string): Promise<RunCounters | null> {
+    return this.runs.get(runId) ?? null;
+  }
+
+  async lastRunId(sourceId: string): Promise<string | null> {
+    return this.pointers.get(sourceId) ?? null;
+  }
+
+  private open(runId: string) {
+    const existing = this.runs.get(runId);
+    if (existing) return existing;
+
+    const created = { completed: 0, failed: 0, startedAt: new Date().toISOString() };
+    this.runs.set(runId, created);
+    return created;
   }
 }
 

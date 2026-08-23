@@ -15,7 +15,6 @@ export {
 export {
   type CacheMetadata,
   type FetchOutcome,
-  type FetchPolicy,
   type FetchTask,
   JobSourcePort,
   type RawBatch,
@@ -26,6 +25,8 @@ export {
   JobRepository,
   type RawObjectRef,
   RawStorage,
+  type RunCounters,
+  RunRegistry,
   SourceRegistry,
   type UpsertOutcome,
   WorkQueue,
@@ -56,3 +57,8 @@ export {
   type NormalizeAndStoreOutput,
   NormalizeAndStoreUseCase,
 } from "./use-cases/normalize-and-store.use-case.js";
+export {
+  type SweepExpiredPostingsInput,
+  type SweepExpiredPostingsOutput,
+  SweepExpiredPostingsUseCase,
+} from "./use-cases/sweep-expired-postings.use-case.js";

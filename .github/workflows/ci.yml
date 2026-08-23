@@ -1,0 +1,94 @@
+name: ci
+
+# Este repositório é um perfil: um bot do WakaTime commita no README da raiz
+# várias vezes por dia. O filtro de `paths` existe para que essas rodadas do bot
+# não disparem o CI — só mudança dentro de `job-radar/` (ou neste workflow)
+# justifica gastar um runner.
+on:
+  pull_request:
+    paths:
+      - "job-radar/**"
+      - ".github/workflows/ci.yml"
+  push:
+    branches: [main]
+    paths:
+      - "job-radar/**"
+      - ".github/workflows/ci.yml"
+
+# Só leitura: nada aqui publica release, comenta em PR ou empurra commit.
+permissions:
+  contents: read
+
+# Push novo na mesma ref cancela a rodada anterior — o resultado dela já nasceu
+# obsoleto.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: "22"
+
+jobs:
+  check:
+    name: Lint, typecheck e testes
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        # O projeto vive numa subpasta do repo de perfil, não na raiz.
+        working-directory: job-radar
+    steps:
+      - uses: actions/checkout@v4
+
+      # Sem `version:` de propósito: a versão do pnpm sai do campo
+      # `packageManager` do package.json, que é a fonte única da verdade.
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: job-radar/package.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+          cache-dependency-path: job-radar/pnpm-lock.yaml
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm lint
+
+      - run: pnpm typecheck
+
+      - run: pnpm test
+
+  synth:
+    name: CDK synth
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: job-radar/package.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+          cache-dependency-path: job-radar/pnpm-lock.yaml
+
+      # O bundling do NodejsFunction roda esbuild, cujo postinstall o pnpm 10
+      # bloqueia por padrão. O `pnpm.onlyBuiltDependencies` do package.json da
+      # raiz do workspace libera exatamente esse pacote — sem isso o synth falha
+      # aqui, não no deploy.
+      - name: Install
+        working-directory: job-radar
+        run: pnpm install --frozen-lockfile
+
+      # Sem credenciais AWS por design: `bin/app.ts` cai no fallback de
+      # `CDK_DEFAULT_ACCOUNT`/`CDK_DEFAULT_REGION`, então a stack sintetiza
+      # agnóstica de conta. Se um dia o synth passar a exigir credencial, é sinal
+      # de que alguém introduziu um lookup — e é isso que este job pega.
+      - name: Synth
+        working-directory: job-radar/infra
+        run: npx cdk synth --context stage=ci > /dev/null

@@ -55,18 +55,6 @@ export type FetchOutcome =
   /** A fonte respondeu 304: nada mudou desde o último ETag/Last-Modified. */
   | { readonly kind: "not-modified"; readonly task: FetchTask };
 
-/** Política de educação com a fonte. Vive no adapter porque varia por fonte. */
-export interface FetchPolicy {
-  readonly minDelayMs: number;
-  readonly maxAttempts: number;
-  readonly respectsRobotsTxt: boolean;
-  /**
-   * RemoteOK, Remotive e Jobicy exigem crédito e link de volta nos Termos de
-   * Uso. Não é detalhe cosmético: o RemoteOK suspende o acesso sem o backlink.
-   */
-  readonly requiresAttribution: boolean;
-}
-
 /**
  * A porta única de fonte de vagas.
  *
@@ -77,10 +65,16 @@ export interface FetchPolicy {
  * `fetch` faz I/O e é mockável; `parse` é PURA e roda contra fixtures gravadas.
  * Parser drift — a fonte muda o JSON e o pipeline degrada em silêncio — é o
  * modo de falha número um de um agregador, e é `parse` que o teste ataca.
+ *
+ * NÃO declare política de educação (delay mínimo, tentativas) aqui. O
+ * limitador de taxa real do sistema é a concorrência reservada da Lambda de
+ * fetch — `reservedConcurrentExecutions` em `infra/lib/ingestion-stack.ts` —,
+ * que é o único ponto capaz de segurar o paralelismo entre invocações. Um
+ * campo de configuração no adapter que nenhum chamador lê não limita nada:
+ * só dá a impressão de que limita, que é pior do que não ter.
  */
 export abstract class JobSourcePort {
   abstract readonly id: SourceId;
-  abstract readonly policy: FetchPolicy;
 
   /** Explode a config em tarefas iniciais (páginas, slugs, termos). */
   abstract discover(config: SourceConfig, runId: string): Result<FetchTask[], BusinessError>;
