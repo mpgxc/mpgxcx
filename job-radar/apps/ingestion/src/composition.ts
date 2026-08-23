@@ -2,7 +2,14 @@ import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import { S3Client } from "@aws-sdk/client-s3";
 import { SQSClient } from "@aws-sdk/client-sqs";
 import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
-import { CircuitBreaker, GupyAdapter, GupyClient, HttpClient } from "@job-radar/adapters";
+import {
+  CircuitBreaker,
+  GreenhouseAdapter,
+  GreenhouseClient,
+  GupyAdapter,
+  GupyClient,
+  HttpClient,
+} from "@job-radar/adapters";
 import {
   DiscoverSourceWorkUseCase,
   FetchSourceBatchUseCase,
@@ -76,7 +83,14 @@ export function buildContainer(): Container {
     new GupyClient(http, new CircuitBreaker("gupy", { failureThreshold: 5, cooldownMs: 30_000 })),
   );
 
-  const catalog = new SourceCatalog([gupy]);
+  const greenhouse = new GreenhouseAdapter(
+    new GreenhouseClient(
+      http,
+      new CircuitBreaker("greenhouse", { failureThreshold: 5, cooldownMs: 30_000 }),
+    ),
+  );
+
+  const catalog = new SourceCatalog([gupy, greenhouse]);
 
   const registry = new DynamoSourceRegistry(dynamo, config.tableName);
   const runs = new DynamoRunRegistry(dynamo, config.tableName);
