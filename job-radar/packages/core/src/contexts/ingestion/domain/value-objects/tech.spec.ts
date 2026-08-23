@@ -37,3 +37,21 @@ describe("extractStack — fronteiras de palavra", () => {
     expect(extractStack(text)).toEqual(extractStack(text));
   });
 });
+
+describe("extractStack — `go` exige contexto de linguagem", () => {
+  it("ignora 'go' como verbo comum do inglês", () => {
+    // A fronteira de palavra resolvia "Django"/"Google", mas não o verbo solto:
+    // as 15 vagas do board do Greenhouse eram taggeadas com `go`, nenhuma de Go.
+    // Uma tag errada em quase todo mundo não degrada a faceta, inutiliza.
+    expect(extractStack("You will go deep on distributed systems.")).toEqual([]);
+    expect(extractStack("We are ready to go and iterate fast.")).toEqual([]);
+    expect(extractStack("Experience in go-to-market strategy")).toEqual([]);
+  });
+
+  it("reconhece Go quando a vizinhança é de linguagem", () => {
+    expect(extractStack("Golang developer")).toContain("go");
+    expect(extractStack("Strong experience with Go")).toContain("go");
+    expect(extractStack("Hiring a Go engineer for the platform")).toContain("go");
+    expect(extractStack("Our stack: Python, Go, Rust")).toEqual(["go", "python", "rust"]);
+  });
+});
