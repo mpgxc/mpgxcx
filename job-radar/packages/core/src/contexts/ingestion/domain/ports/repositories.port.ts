@@ -26,6 +26,48 @@ export abstract class SourceRegistry {
   abstract listEnabled(): Promise<SourceConfig[]>;
 }
 
+/** Placar de uma rodada. É o que autoriza (ou proíbe) o sweeper a expirar. */
+export interface RunCounters {
+  /** Tarefas de fetch que terminaram bem — inclui 304, que também é sucesso. */
+  readonly completed: number;
+  /** Tarefas que esgotaram o retry ou falharam de forma definitiva. */
+  readonly failed: number;
+  readonly startedAt: string;
+}
+
+/**
+ * Contadores de rodada.
+ *
+ * Existe por um motivo só: dar ao sweeper um jeito de saber se a rodada foi
+ * ÍNTEGRA antes de expirar qualquer coisa. Não dá para comparar "tarefas
+ * esperadas × concluídas" porque a paginação é descoberta dinamicamente — o
+ * `discover` não sabe quantas páginas o board tem, cada página é que anuncia a
+ * próxima. Então o registro conta o que de fato aconteceu: quantas tarefas
+ * fecharam bem e quantas falharam.
+ *
+ * Os incrementos PRECISAM ser atômicos no adapter: dezenas de Lambdas de fetch
+ * batem no mesmo registro ao mesmo tempo, e um ler-modificar-escrever perderia
+ * exatamente as falhas que a guarda existe para enxergar.
+ */
+export abstract class RunRegistry {
+  /**
+   * Abre a rodada e aponta a última rodada de cada fonte para ela.
+   *
+   * O ponteiro é o que permite um sweeper agendado (que não recebe nada do
+   * `discovery`) descobrir sozinho qual `runId` varrer.
+   */
+  abstract startRun(runId: string, sourceIds: readonly string[]): Promise<void>;
+
+  abstract recordSuccess(runId: string, sourceId: string): Promise<void>;
+  abstract recordFailure(runId: string, sourceId: string): Promise<void>;
+
+  /** `null` quando não há registro — nesse caso a integridade é DESCONHECIDA. */
+  abstract get(runId: string): Promise<RunCounters | null>;
+
+  /** Última rodada aberta para a fonte, ou `null` se a fonte nunca rodou. */
+  abstract lastRunId(sourceId: string): Promise<string | null>;
+}
+
 /** Metadados de cache HTTP por tarefa, para conseguir mandar If-None-Match. */
 export abstract class FetchCacheStore {
   abstract get(task: FetchTask): Promise<CacheMetadata | null>;
