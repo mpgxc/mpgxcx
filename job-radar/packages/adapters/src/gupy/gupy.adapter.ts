@@ -2,7 +2,6 @@ import {
   type BusinessError,
   type CacheMetadata,
   type FetchOutcome,
-  type FetchPolicy,
   type FetchTask,
   InvalidSourceConfig,
   type JobPosting,
@@ -34,14 +33,6 @@ const MAX_PAGES = 50;
  */
 export class GupyAdapter extends JobSourcePort {
   readonly id = GUPY_SOURCE_ID;
-
-  readonly policy: FetchPolicy = {
-    minDelayMs: 500,
-    maxAttempts: 3,
-    // É uma API JSON pública do próprio portal, não crawling de página.
-    respectsRobotsTxt: false,
-    requiresAttribution: false,
-  };
 
   constructor(private readonly client: GupyClient) {
     super();

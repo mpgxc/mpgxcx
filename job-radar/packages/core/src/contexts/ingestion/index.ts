@@ -15,7 +15,6 @@ export {
 export {
   type CacheMetadata,
   type FetchOutcome,
-  type FetchPolicy,
   type FetchTask,
   JobSourcePort,
   type RawBatch,
