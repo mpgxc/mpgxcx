@@ -1,0 +1,594 @@
+{
+ "jobs": [
+  {
+   "id": "7458d4e9-da2e-47bd-98cb-adfda43d42b2",
+   "title": "Engineering Manager - EU",
+   "department": "Engineering",
+   "team": "EMEA Engineering",
+   "employmentType": "FullTime",
+   "location": "Remote - European Union",
+   "shouldDisplayCompensationOnJobPostings": true,
+   "secondaryLocations": [
+    {
+     "location": "Spain",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "Spain",
+       "addressCountry": "Spain",
+       "addressLocality": "Spain"
+      }
+     }
+    },
+    {
+     "location": "Italy",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Italy",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Germany",
+     "address": {
+      "postalAddress": {
+       "addressCountry": "Germany",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Switzerland",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Switzerland",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Denmark",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Denmark",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Norway",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Norway",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Croatia",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Croatia",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Ireland",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "Ireland",
+       "addressCountry": "Ireland",
+       "addressLocality": "Ireland"
+      }
+     }
+    },
+    {
+     "location": "Stockholm",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "Stockholm",
+       "addressCountry": "Sweden",
+       "addressLocality": "Stockholm"
+      }
+     }
+    },
+    {
+     "location": "Romania",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Romania",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Austria",
+     "address": {
+      "postalAddress": {
+       "addressCountry": "Austria"
+      }
+     }
+    },
+    {
+     "location": "Barcelona",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "Catalonia",
+       "addressCountry": "Spain",
+       "addressLocality": "Barcelona"
+      }
+     }
+    },
+    {
+     "location": "Netherlands",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Netherlands",
+       "addressLocality": "Amsterdam"
+      }
+     }
+    },
+    {
+     "location": "Portugal",
+     "address": {
+      "postalAddress": {
+       "addressCountry": "Portugal"
+      }
+     }
+    },
+    {
+     "location": "France",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "France",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Berlin",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Germany",
+       "addressLocality": "Berlin"
+      }
+     }
+    },
+    {
+     "location": "Sweden",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Sweden",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Hungary",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "Hungary",
+       "addressCountry": "Hungary",
+       "addressLocality": "Budapest"
+      }
+     }
+    },
+    {
+     "location": "Estonia",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Estonia",
+       "addressLocality": ""
+      }
+     }
+    }
+   ],
+   "publishedAt": "2024-03-04T14:29:08.532+00:00",
+   "isListed": true,
+   "isRemote": true,
+   "workplaceType": "Remote",
+   "address": {
+    "postalAddress": {
+     "postalCode": "",
+     "addressRegion": "",
+     "addressCountry": "European Union",
+     "addressLocality": ""
+    }
+   },
+   "jobUrl": "https://jobs.ashbyhq.com/ashby/7458d4e9-da2e-47bd-98cb-adfda43d42b2",
+   "applyUrl": "https://jobs.ashbyhq.com/ashby/7458d4e9-da2e-47bd-98cb-adfda43d42b2/application",
+   "descriptionHtml": "<p style=\"min-height:1.5em\">Hi 👋 I’m <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://uk.linkedin.com/in/colinhoweuk\"><u>Colin</u></a>, Director of Engineering, Europe. How do you feel about software engineers writing product specs, making product decisions, and not breaking down projects into individual tickets? If that sounds exciting (even if a bit scary), read on because I’m looking for an engineering manager to help us build a different type of engineering team and culture at Ashby.</p><p style=\"min-height:1.5em\">To start, why do we need to be different? Time and again, I have witnessed engineers knowing what needs to be done yet being unable to get things done because of “the process” or because “more data is needed.” Some of the most effective projects have been <em>skunkworks </em>projects, where engineers have taken total ownership of a problem and driven it to completion. I want to normalize that at Ashby.</p><p style=\"min-height:1.5em\">When we think about how these processes came about, we realize they carry a <em>pessimistic</em> mindset. They box people into smaller roles to minimize the chance of not meeting a certain standard. At Ashby. we’re building an environment that is <em>optimistic </em>about what engineers can own and achieve and embraces the innovative engineers (and frankly, often stays out of their way).</p><p style=\"min-height:1.5em\">To accomplish this, our engineering leaders need to think deeply about individual performance, process, and culture - not running sprint planning or driving product and technical decisions. You’ll focus on building your team, their skills to thrive with the ownership they’re given, and an environment that empowers them to do their best work consistently, with little distraction. For junior EMs we try to stay within 6 direct reports. This enables them to spend time with our teams observing, correcting, praising, and, yes, coding. We like our managers to be hands-on while also making sure they’re not on the critical path.</p><p style=\"min-height:1.5em\">We’ve already gathered an<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.ashbyhq.com/team\"> <u>experienced, talented, and collaborative team</u></a> of 25+ engineers. You’ll help me manage the growing team of engineers in Europe.</p><p style=\"min-height:1.5em\">In addition to working with engineers you’ll also get to work on projects yourselves. Some examples of work our engineering leaders have done:</p><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">Provide feedback on product and technical specs to help engineers identify where to cut scope or improve quality. You don’t make the final decisions, but you’ll influence and coach ICs to reach the right ones.</p></li><li><p style=\"min-height:1.5em\">Grow engineers to the point where they can take large, loosely defined projects, and deliver them with little intervention. They still ask for help when needed - the difference is that they’re driving.</p></li><li><p style=\"min-height:1.5em\">Jump into our systems and code to debug a customer issue, ship a small bug fix, or improve our developer experience. Engineering leaders at Ashby are great engineers and enjoy keeping their skills up-to-date (while staying off the critical path).</p></li><li><p style=\"min-height:1.5em\">Improve how we generate and simulate data in demo accounts. It’s a project off the critical path, but it helps you keep up-to-date on our codebase while immensely impacting the business, from Engineering to QA to Sales.</p><p style=\"min-height:1.5em\"></p></li></ul><h1>Why be a manager?</h1><p style=\"min-height:1.5em\">I had two experiences early in my career that set me on my path. I had a great manager who asked tonnes of questions about the decisions I was making and coached me without me realizing it. And I had a <em>terrible</em> manager - being told to work harder after a week of 3am finishes was not what I needed as a young engineer. The stark difference between these two experiences motivated me to become a manager: I wanted every engineer I worked with to have the support I had in the best case.</p><p style=\"min-height:1.5em\">Since then, as I’ve learned more, I’ve realized that I love the kind of problems I get to solve as a manager. Deeply complex problems with long-term impact both on the company and on people’s lives. One of my proudest achievements is creating a fully transparent pay system, and on the day it was revealed, everybody was happy with it. Nobody stormed out. By spending time thinking deeply about everybody’s pay and ensuring the mechanics of promotion were clear, I put the team in a place where they could see a peer was paid more than them, and it not be a problem.</p><p style=\"min-height:1.5em\">Despite all this, I love being technical. I sometimes indulge myself and spend a morning writing some code to improve tests or provide better abstractions. If I couldn’t be a manager, I’d be super happy to be an IC.</p><p style=\"min-height:1.5em\">I’m looking for someone who is passionate. Passionate about both management and being technical. Someone who spots a pattern amongst their team, figures out a better way for us to operate, and then builds the automation that powers it. I introduced a new process that enables engineers to merge 30% of PRs without a human review beforehand. I also built the automation that approves these PRs. I <em>also</em> built that automation with abstractions that make it easy for the engineers to improve the automation themselves.</p><p style=\"min-height:1.5em\">It can be hard to find seasoned engineering leaders who haven’t succumbed to the status quo in some way or another. We're committed to giving all our people a total and utter lack of terrible managers, and that means we're willing to take a chance on someone early in their leadership journey who's courageous, principled, and has the drive to build themselves into a great leader who can say “Yah I know everyone is doing that, but we won't because...”</p><p style=\"min-height:1.5em\"></p><h1>Why You Should or Shouldn’t Apply</h1><p style=\"min-height:1.5em\">Engineering leadership comes in many flavors, not all of which fit our model. I thought I’d outline some things I’m looking for to help you decide if this fits what you’re looking for:</p><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\"><em>You love being technical</em> and can hold in-depth conversations with direct reports from infra to backend to frontend.</p></li><li><p style=\"min-height:1.5em\"><em>You enjoy management problems</em>. We want people who get <em>excited </em>about driving people to be their best, giving difficult feedback, and building systems that make this easier</p></li><li><p style=\"min-height:1.5em\"><em>You hold your team to a high standard</em> and don’t shy away from getting into the details and giving feedback, even to the best folks on your team.</p></li><li><p style=\"min-height:1.5em\"><em>You are an excellent and empathetic communicator.</em> Facilitating change at both an individual and organization level requires understanding how to navigate the beliefs, opinions, and past experiences of engineers and figuring out how to both convince them of a new way of doing things while also leaving yourself open to feedback. </p></li><li><p style=\"min-height:1.5em\"><em>You know what exceptional engineers look like.</em> You’ve thought deeply about what makes them tick, how to recruit them, and how to grow folks into them. I want to see depth here, the industry often regurgitates a vanilla description, but the reality is more nuanced.</p></li><li><p style=\"min-height:1.5em\"><em>You’re good at thinking about product, business</em>, and maybe even design, but you’re not interested in calling the shots and are more interested in building a team that can make the best decisions without you.</p></li><li><p style=\"min-height:1.5em\"><em>You thrive in high-trust, high-autonomy environments</em>. We're a young startup where leaders wear multiple hats, and you'll build your own (high-speed) on-ramp through developing strong feedback loops.</p><p style=\"min-height:1.5em\"></p></li></ul><p style=\"min-height:1.5em\"><strong>Put another way, you shouldn’t apply if:</strong></p><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">You don’t enjoy coding or don’t find time to stay up-to-date on technology.</p></li><li><p style=\"min-height:1.5em\">You’ve gotten into management because it was the only growth path available</p></li><li><p style=\"min-height:1.5em\">You want to make all the product decisions instead of empowering your team to make those calls.</p></li><li><p style=\"min-height:1.5em\">You're happy with a team of engineers that are predominantly early-career, mid-career, or don't thrive with ownership or autonomy. With enough guardrails, the team can get things done.</p></li><li><p style=\"min-height:1.5em\">A staff or principal engineer to you is someone who spends most of their time project managing or doing architecture reviews.</p></li><li><p style=\"min-height:1.5em\">You’re not optimistic or convinced that we can build a large engineering team that functions differently than the status quo. You think, at some size, common processes need to be implemented to ensure consistent product delivery (e.g., sprint planning, product managers writing in-depth specifications). You might not say it out loud, but you think, at some size, compromises have to be made for the sake of hiring numbers.</p></li></ul><p style=\"min-height:1.5em\"></p><h1>What We’re Building</h1><p style=\"min-height:1.5em\">Talent teams aspire to build a hiring process that identifies great candidates, moves them quickly through the interview process, and provides an excellent experience for the candidate. To accomplish this, recruiters perform thousands of daily tasks to coordinate and relay information between candidates, interviewers, and hiring managers. Teams struggle to keep up!</p><p style=\"min-height:1.5em\">Scheduling a final round is an excellent example of our customers' challenges. A recruiter needs to collect availability from the candidate, identify potential interviewers, perform “Calendar Tetris” to find who is available to interview the candidate, schedule on the earliest date possible, and perform any last-minute adjustments as availability changes. They must perform this while considering the interview load on each individual and whether interviewers need to be trained and shadowing others. 🥵</p><p style=\"min-height:1.5em\">Ashby provides talent teams with intelligent and powerful software that provides insights into where they’re failing and automates or simplifies many of the tasks they’re underwater with. We put a lot of effort into designing products that are approachable to beginners but mastered and extended by power users. In many ways, spreadsheets set the bar here.</p><p style=\"min-height:1.5em\">We have many customers, great revenue growth, years of runway, and amazing investors like YCombinator, Elad Gil, and Lachy Groom. I’ll share more once we meet.</p><p style=\"min-height:1.5em\"></p><h1>Engineering Culture</h1><p style=\"min-height:1.5em\">Our engineering culture is motivated by <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.linkedin.com/in/abhikpramanik/\"><u>Abhik</u></a> and <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.linkedin.com/in/benjaminencz/\"><u>Benji</u></a>’s (our co-founders) belief that a small talented team, given the right environment, can build high-quality software fast (and work regular hours!).</p><p style=\"min-height:1.5em\"></p><h2>Collaboration is Natural, Communication is Deliberate</h2><p style=\"min-height:1.5em\">Our engineering team (and the team at large) consists of lifelong learners who are humble and kind (meet them <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.ashbyhq.com/team\"><u>here</u></a>!). These attributes create an environment where collaboration happens naturally (we filter for it in interviews). We combine this with research, prototyping, and written proposals to see around corners and get feedback from the team across time zones. Focus time is something that we hold sacred, and, with thoughtful and deliberate communication, engineers can focus 36h out of a 40h work week (Abhik wrote about it <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.ashbyhq.com/blog/company/thoughtful-communication\"><u>here</u></a>). Even managers can rely on getting consistent time (and support to make, if necessary) to focus and do creative work without the demand of constant meetings.</p><p style=\"min-height:1.5em\"></p><h2>Increase Leverage, not Team Size</h2><p style=\"min-height:1.5em\">We built Ashby with the quality, breadth, and depth that many customers would expect from much larger teams over larger time scales. We’ve done this through investment in:</p><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\"><strong>Great developer tooling.</strong> Our CI/CD takes ~10m, and we deploy at least 5x a day. Everyone on the team has contributed to developer experience 💪🏾</p></li><li><p style=\"min-height:1.5em\"><strong>Building blocks to create powerful and customizable products fast. </strong>At the core of Ashby is a set of common components (analytics modeling and query language, policy engine, workflow engine, design system) which we are constantly improving. Each improvement to a common component cascades throughout our app (short video on it <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.loom.com/share/32c0cc3eedf2450fb66a901b76186ce4\"><u>here</u></a>).</p></li><li><p style=\"min-height:1.5em\"><strong>AI-powered tooling. </strong>We think of AI as a way to automate the mundane parts of building and maintaining high-quality software. We use a combination of third-party and internally built tools that, for instance, auto-triage customer issues, suggest fixes, prototype ideas, generate production-ready code, and conduct code reviews. Engineers have an unlimited token budget (but are not measured on it). We write in detail about our philosophy, current use of AI, and future plans for AI in Engineering <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.ashbyhq.com/blog/engineering/ai-ashby-engineering-and-the-future\"><u>here</u></a>.</p></li></ul><p style=\"min-height:1.5em\">Here’s an impromptu quote from Arjun in our company Slack of what it’s like to build a feature at Ashby:</p><p style=\"min-height:1.5em\"></p><div style=\"text-align:left\"><img style=\"max-width:100%\" src=\"https://app.ashbyhq.com/api/images/user-content/4ea5f68e-c33e-4ac9-831a-e732bee4a303/8d94727a-46d8-42a2-9627-ddcd7f822f95/arjun.png\" /></div><p style=\"min-height:1.5em\"></p><p style=\"min-height:1.5em\">And a demo of one of these building blocks:</p><div><div style=\"left:0;width:100%;height:0;position:relative;padding-bottom:62.5%\"><iframe src=\"https://embedded-media.ashbyhq.com/embed/4ea5f68e-c33e-4ac9-831a-e732bee4a303/9a5f032d-c731-411e-98cf-261517156f01\" style=\"top:0;left:0;width:100%;height:100%;position:absolute;border:0\" allowfullscreen scrolling=\"no\" allow=\"encrypted-media *; picture-in-picture *;\" sandbox=\"allow-scripts allow-same-origin allow-presentation\"></iframe></div></div><h2></h2><h2>Give Engineers Ownership &amp; Autonomy</h2><p style=\"min-height:1.5em\">We, as engineers, find clever ways to solve problems, which amplifies when we deeply understand the problem. All of us in technical leadership did our best work as engineers when we had a deep understanding of the end-user and the business and ownership over the solution. Our engineering culture reflects this experience: engineers own projects end-to-end, from speaking with users to writing product specs to UX design. These are skills that we often don’t get to practice as engineers, and, as a manager at Ashby, you’ll provide mentorship and feedback to engineers to ensure they are successful when delivering projects.</p><p style=\"min-height:1.5em\"></p><h2>Put Effort into Diversity </h2><p style=\"min-height:1.5em\">Diverse teams<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://hbr.org/2016/11/why-diverse-teams-are-smarter\"> <u>drive innovation and better outcomes</u></a>. As the father of two young girls, I want to see them grow up in a world where all industries are open <em>and welcoming</em> to everyone, regardless of race, gender, or preferences. Helping to build a more diverse team at Ashby is my way of contributing to this change.</p><p style=\"min-height:1.5em\">Today, 26% of engineers at Ashby are from underrepresented groups. It’s not great, and we are taking conscious steps to improve, like sourcing diverse candidates, providing generous paid family leave, no leetcode interviews, and more.</p><p style=\"min-height:1.5em\"></p><h1>Interview Process</h1><p style=\"min-height:1.5em\">At Ashby, our team and interview process want to help you show your best self. We’ll dive into past projects and simulate working together. Our interview process is six interviews in the following order: </p><ol style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\"><em>Intro Call (30m)</em> - Discuss your application questions, align on the responsibilities of the role, and answer questions about Ashby.</p></li><li><p style=\"min-height:1.5em\"><em>Past Experience Deep Dive (1h)</em> - Discuss your past experience as an engineering leader.</p></li><li><p style=\"min-height:1.5em\"><em>Technical Screen (1h)</em> - Add a feature back to Ashby. You'll spend most of your time understanding a specific part of our codebase and write less than 15 lines of code.</p></li><li><p style=\"min-height:1.5em\"><em>Coffee Chat with VP of Engineering (1h)</em> - Spend time with our VP of Engineering and get to know each other.</p></li><li><p style=\"min-height:1.5em\"><em>Meet the Team (2h)</em> - At this point, the engineering leadership team is excited about you and you'll meet our CEO, Engineers, Product Managers, and some other folks on the team.</p></li></ol><p style=\"min-height:1.5em\">I will be your main point of contact and prepare you for interviews. If we don’t give an offer, we’ll provide feedback!</p><p style=\"min-height:1.5em\"></p><h1>Technology Stack</h1><p style=\"min-height:1.5em\">I’m sharing our tech stack with the caveat that we don’t require previous experience: TypeScript (frontend &amp; backend), Node.js, React, Apollo GraphQL, Postgres, Redis.</p><p style=\"min-height:1.5em\"></p><h1>Benefits</h1><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">Competitive salary and equity.</p></li><li><p style=\"min-height:1.5em\"><em>10-year exercise window for stock options</em>. You shouldn’t feel pressure to purchase stock options if you leave Ashby - do it when you feel financially comfortable.</p></li><li><p style=\"min-height:1.5em\">Unlimited PTO, and we will encourage you to take it.</p></li><li><p style=\"min-height:1.5em\">Generous equipment, software, and office furniture budget. Get what you need to be happy and productive!</p></li><li><p style=\"min-height:1.5em\">$100/month education budget with more expensive items (like conferences) covered with manager approval.</p></li></ul><p style=\"min-height:1.5em\">Ashby’s success hinges on hiring great people and creating an environment where we can be happy, feel challenged, and do our best work. We’re being deliberate about building that environment from the ground up. I hope that excites you enough to apply.</p><p style=\"min-height:1.5em\"><em>Ashby provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, religion, sex, national origin, age, disability, genetics, sexual orientation, gender identity, or gender expression. We are committed to a diverse and inclusive workforce and welcome people from all backgrounds, experiences, perspectives, and abilities.</em></p><p style=\"min-height:1.5em\"><em>Ashby is committed to a fair and transparent hiring process. We confirm that this advertisement is for an active, existing vacancy within our organization. Please be advised that we may use artificial intelligence-driven tools to assist our recruitment team in screening, assessing, and selecting candidates for this position.</em></p>",
+   "descriptionPlain": "Hi 👋 I’m Colin https://uk.linkedin.com/in/colinhoweuk, Director of Engineering, Europe. How do you feel about software engineers writing product specs, making product decisions, and not breaking down projects into individual tickets? If that sounds exciting (even if a bit scary), read on because I’m looking for an engineering manager to help us build a different type of engineering team and culture at Ashby.\n\nTo start, why do we need to be different? Time and again, I have witnessed engineers knowing what needs to be done yet being unable to get things done because of “the process” or because “more data is needed.” Some of the most effective projects have been skunkworks projects, where engineers have taken total ownership of a problem and driven it to completion. I want to normalize that at Ashby.\n\nWhen we think about how these processes came about, we realize they carry a pessimistic mindset. They box people into smaller roles to minimize the chance of not meeting a certain standard. At Ashby. we’re building an environment that is optimistic about what engineers can own and achieve and embraces the innovative engineers (and frankly, often stays out of their way).\n\nTo accomplish this, our engineering leaders need to think deeply about individual performance, process, and culture - not running sprint planning or driving product and technical decisions. You’ll focus on building your team, their skills to thrive with the ownership they’re given, and an environment that empowers them to do their best work consistently, with little distraction. For junior EMs we try to stay within 6 direct reports. This enables them to spend time with our teams observing, correcting, praising, and, yes, coding. We like our managers to be hands-on while also making sure they’re not on the critical path.\n\nWe’ve already gathered an experienced, talented, and collaborative team https://www.ashbyhq.com/team of 25+ engineers. You’ll help me manage the growing team of engineers in Europe.\n\nIn addition to working with engineers you’ll also get to work on projects yourselves. Some examples of work our engineering leaders have done:\n\n - Provide feedback on product and technical specs to help engineers identify where to cut scope or improve quality. You don’t make the final decisions, but you’ll influence and coach ICs to reach the right ones.\n\n - Grow engineers to the point where they can take large, loosely defined projects, and deliver them with little intervention. They still ask for help when needed - the difference is that they’re driving.\n\n - Jump into our systems and code to debug a customer issue, ship a small bug fix, or improve our developer experience. Engineering leaders at Ashby are great engineers and enjoy keeping their skills up-to-date (while staying off the critical path).\n\n - Improve how we generate and simulate data in demo accounts. It’s a project off the critical path, but it helps you keep up-to-date on our codebase while immensely impacting the business, from Engineering to QA to Sales.\n   \n   \n\n\nWHY BE A MANAGER?\n\nI had two experiences early in my career that set me on my path. I had a great manager who asked tonnes of questions about the decisions I was making and coached me without me realizing it. And I had a terrible manager - being told to work harder after a week of 3am finishes was not what I needed as a young engineer. The stark difference between these two experiences motivated me to become a manager: I wanted every engineer I worked with to have the support I had in the best case.\n\nSince then, as I’ve learned more, I’ve realized that I love the kind of problems I get to solve as a manager. Deeply complex problems with long-term impact both on the company and on people’s lives. One of my proudest achievements is creating a fully transparent pay system, and on the day it was revealed, everybody was happy with it. Nobody stormed out. By spending time thinking deeply about everybody’s pay and ensuring the mechanics of promotion were clear, I put the team in a place where they could see a peer was paid more than them, and it not be a problem.\n\nDespite all this, I love being technical. I sometimes indulge myself and spend a morning writing some code to improve tests or provide better abstractions. If I couldn’t be a manager, I’d be super happy to be an IC.\n\nI’m looking for someone who is passionate. Passionate about both management and being technical. Someone who spots a pattern amongst their team, figures out a better way for us to operate, and then builds the automation that powers it. I introduced a new process that enables engineers to merge 30% of PRs without a human review beforehand. I also built the automation that approves these PRs. I also built that automation with abstractions that make it easy for the engineers to improve the automation themselves.\n\nIt can be hard to find seasoned engineering leaders who haven’t succumbed to the status quo in some way or another. We're committed to giving all our people a total and utter lack of terrible managers, and that means we're willing to take a chance on someone early in their leadership journey who's courageous, principled, and has the drive to build themselves into a great leader who can say “Yah I know everyone is doing that, but we won't because...”\n\n\n\n\nWHY YOU SHOULD OR SHOULDN’T APPLY\n\nEngineering leadership comes in many flavors, not all of which fit our model. I thought I’d outline some things I’m looking for to help you decide if this fits what you’re looking for:\n\n - You love being technical and can hold in-depth conversations with direct reports from infra to backend to frontend.\n\n - You enjoy management problems. We want people who get excited about driving people to be their best, giving difficult feedback, and building systems that make this easier\n\n - You hold your team to a high standard and don’t shy away from getting into the details and giving feedback, even to the best folks on your team.\n\n - You are an excellent and empathetic communicator. Facilitating change at both an individual and organization level requires understanding how to navigate the beliefs, opinions, and past experiences of engineers and figuring out how to both convince them of a new way of doing things while also leaving yourself open to feedback. \n\n - You know what exceptional engineers look like. You’ve thought deeply about what makes them tick, how to recruit them, and how to grow folks into them. I want to see depth here, the industry often regurgitates a vanilla description, but the reality is more nuanced.\n\n - You’re good at thinking about product, business, and maybe even design, but you’re not interested in calling the shots and are more interested in building a team that can make the best decisions without you.\n\n - You thrive in high-trust, high-autonomy environments. We're a young startup where leaders wear multiple hats, and you'll build your own (high-speed) on-ramp through developing strong feedback loops.\n   \n   \n\nPut another way, you shouldn’t apply if:\n\n - You don’t enjoy coding or don’t find time to stay up-to-date on technology.\n\n - You’ve gotten into management because it was the only growth path available\n\n - You want to make all the product decisions instead of empowering your team to make those calls.\n\n - You're happy with a team of engineers that are predominantly early-career, mid-career, or don't thrive with ownership or autonomy. With enough guardrails, the team can get things done.\n\n - A staff or principal engineer to you is someone who spends most of their time project managing or doing architecture reviews.\n\n - You’re not optimistic or convinced that we can build a large engineering team that functions differently than the status quo. You think, at some size, common processes need to be implemented to ensure consistent product delivery (e.g., sprint planning, product managers writing in-depth specifications). You might not say it out loud, but you think, at some size, compromises have to be made for the sake of hiring numbers.\n\n\n\n\nWHAT WE’RE BUILDING\n\nTalent teams aspire to build a hiring process that identifies great candidates, moves them quickly through the interview process, and provides an excellent experience for the candidate. To accomplish this, recruiters perform thousands of daily tasks to coordinate and relay information between candidates, interviewers, and hiring managers. Teams struggle to keep up!\n\nScheduling a final round is an excellent example of our customers' challenges. A recruiter needs to collect availability from the candidate, identify potential interviewers, perform “Calendar Tetris” to find who is available to interview the candidate, schedule on the earliest date possible, and perform any last-minute adjustments as availability changes. They must perform this while considering the interview load on each individual and whether interviewers need to be trained and shadowing others. 🥵\n\nAshby provides talent teams with intelligent and powerful software that provides insights into where they’re failing and automates or simplifies many of the tasks they’re underwater with. We put a lot of effort into designing products that are approachable to beginners but mastered and extended by power users. In many ways, spreadsheets set the bar here.\n\nWe have many customers, great revenue growth, years of runway, and amazing investors like YCombinator, Elad Gil, and Lachy Groom. I’ll share more once we meet.\n\n\n\n\nENGINEERING CULTURE\n\nOur engineering culture is motivated by Abhik https://www.linkedin.com/in/abhikpramanik/ and Benji https://www.linkedin.com/in/benjaminencz/’s (our co-founders) belief that a small talented team, given the right environment, can build high-quality software fast (and work regular hours!).\n\n\n\n\nCOLLABORATION IS NATURAL, COMMUNICATION IS DELIBERATE\n\nOur engineering team (and the team at large) consists of lifelong learners who are humble and kind (meet them here https://www.ashbyhq.com/team!). These attributes create an environment where collaboration happens naturally (we filter for it in interviews). We combine this with research, prototyping, and written proposals to see around corners and get feedback from the team across time zones. Focus time is something that we hold sacred, and, with thoughtful and deliberate communication, engineers can focus 36h out of a 40h work week (Abhik wrote about it here https://www.ashbyhq.com/blog/company/thoughtful-communication). Even managers can rely on getting consistent time (and support to make, if necessary) to focus and do creative work without the demand of constant meetings.\n\n\n\n\nINCREASE LEVERAGE, NOT TEAM SIZE\n\nWe built Ashby with the quality, breadth, and depth that many customers would expect from much larger teams over larger time scales. We’ve done this through investment in:\n\n - Great developer tooling. Our CI/CD takes ~10m, and we deploy at least 5x a day. Everyone on the team has contributed to developer experience 💪🏾\n\n - Building blocks to create powerful and customizable products fast. At the core of Ashby is a set of common components (analytics modeling and query language, policy engine, workflow engine, design system) which we are constantly improving. Each improvement to a common component cascades throughout our app (short video on it here https://www.loom.com/share/32c0cc3eedf2450fb66a901b76186ce4).\n\n - AI-powered tooling. We think of AI as a way to automate the mundane parts of building and maintaining high-quality software. We use a combination of third-party and internally built tools that, for instance, auto-triage customer issues, suggest fixes, prototype ideas, generate production-ready code, and conduct code reviews. Engineers have an unlimited token budget (but are not measured on it). We write in detail about our philosophy, current use of AI, and future plans for AI in Engineering here https://www.ashbyhq.com/blog/engineering/ai-ashby-engineering-and-the-future.\n\nHere’s an impromptu quote from Arjun in our company Slack of what it’s like to build a feature at Ashby:\n\n\n\n[https://app.ashbyhq.com/api/images/user-content/4ea5f68e-c33e-4ac9-831a-e732bee4a303/8d94727a-46d8-42a2-9627-ddcd7f822f95/arjun.png]\n\n\n\nAnd a demo of one of these building blocks:\n\n\n\n\n\n\n\nGIVE ENGINEERS OWNERSHIP & AUTONOMY\n\nWe, as engineers, find clever ways to solve problems, which amplifies when we deeply understand the problem. All of us in technical leadership did our best work as engineers when we had a deep understanding of the end-user and the business and ownership over the solution. Our engineering culture reflects this experience: engineers own projects end-to-end, from speaking with users to writing product specs to UX design. These are skills that we often don’t get to practice as engineers, and, as a manager at Ashby, you’ll provide mentorship and feedback to engineers to ensure they are successful when delivering projects.\n\n\n\n\nPUT EFFORT INTO DIVERSITY \n\nDiverse teams drive innovation and better outcomes https://hbr.org/2016/11/why-diverse-teams-are-smarter. As the father of two young girls, I want to see them grow up in a world where all industries are open and welcoming to everyone, regardless of race, gender, or preferences. Helping to build a more diverse team at Ashby is my way of contributing to this change.\n\nToday, 26% of engineers at Ashby are from underrepresented groups. It’s not great, and we are taking conscious steps to improve, like sourcing diverse candidates, providing generous paid family leave, no leetcode interviews, and more.\n\n\n\n\nINTERVIEW PROCESS\n\nAt Ashby, our team and interview process want to help you show your best self. We’ll dive into past projects and simulate working together. Our interview process is six interviews in the following order: \n\n 1. Intro Call (30m) - Discuss your application questions, align on the responsibilities of the role, and answer questions about Ashby.\n\n 2. Past Experience Deep Dive (1h) - Discuss your past experience as an engineering leader.\n\n 3. Technical Screen (1h) - Add a feature back to Ashby. You'll spend most of your time understanding a specific part of our codebase and write less than 15 lines of code.\n\n 4. Coffee Chat with VP of Engineering (1h) - Spend time with our VP of Engineering and get to know each other.\n\n 5. Meet the Team (2h) - At this point, the engineering leadership team is excited about you and you'll meet our CEO, Engineers, Product Managers, and some other folks on the team.\n\nI will be your main point of contact and prepare you for interviews. If we don’t give an offer, we’ll provide feedback!\n\n\n\n\nTECHNOLOGY STACK\n\nI’m sharing our tech stack with the caveat that we don’t require previous experience: TypeScript (frontend & backend), Node.js, React, Apollo GraphQL, Postgres, Redis.\n\n\n\n\nBENEFITS\n\n - Competitive salary and equity.\n\n - 10-year exercise window for stock options. You shouldn’t feel pressure to purchase stock options if you leave Ashby - do it when you feel financially comfortable.\n\n - Unlimited PTO, and we will encourage you to take it.\n\n - Generous equipment, software, and office furniture budget. Get what you need to be happy and productive!\n\n - $100/month education budget with more expensive items (like conferences) covered with manager approval.\n\nAshby’s success hinges on hiring great people and creating an environment where we can be happy, feel challenged, and do our best work. We’re being deliberate about building that environment from the ground up. I hope that excites you enough to apply.\n\nAshby provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, religion, sex, national origin, age, disability, genetics, sexual orientation, gender identity, or gender expression. We are committed to a diverse and inclusive workforce and welcome people from all backgrounds, experiences, perspectives, and abilities.\n\nAshby is committed to a fair and transparent hiring process. We confirm that this advertisement is for an active, existing vacancy within our organization. Please be advised that we may use artificial intelligence-driven tools to assist our recruitment team in screening, assessing, and selecting candidates for this position.",
+   "compensation": {
+    "compensationTierSummary": "€110K – €185K • Offers Equity • Offers Bonus",
+    "scrapeableCompensationSalarySummary": "€110K - €185K",
+    "compensationTiers": [
+     {
+      "id": "f1284fac-20e9-4ed0-9a10-776d526a636c",
+      "tierSummary": "€110K – €185K • Offers Equity • Offers Bonus",
+      "title": "EU",
+      "additionalInformation": null,
+      "components": [
+       {
+        "id": "04679796-e0e4-4d9b-a5c0-0cad3ff8ae95",
+        "summary": "Offers Bonus",
+        "compensationType": "Bonus",
+        "interval": "1 YEAR",
+        "currencyCode": "EUR",
+        "minValue": null,
+        "maxValue": null
+       },
+       {
+        "id": "da741ab6-ff38-4fc2-b7b7-c1ccd7260347",
+        "summary": "Offers Equity",
+        "compensationType": "EquityPercentage",
+        "interval": "NONE",
+        "currencyCode": null,
+        "minValue": null,
+        "maxValue": null
+       },
+       {
+        "id": "201b8495-aa7c-417d-923b-94fced49b246",
+        "summary": "€110K – €185K",
+        "compensationType": "Salary",
+        "interval": "1 YEAR",
+        "currencyCode": "EUR",
+        "minValue": 110000,
+        "maxValue": 185000
+       }
+      ]
+     }
+    ],
+    "summaryComponents": [
+     {
+      "compensationType": "Bonus",
+      "interval": "1 YEAR",
+      "currencyCode": "EUR",
+      "minValue": null,
+      "maxValue": null
+     },
+     {
+      "compensationType": "EquityPercentage",
+      "interval": "NONE",
+      "currencyCode": null,
+      "minValue": null,
+      "maxValue": null
+     },
+     {
+      "compensationType": "Salary",
+      "interval": "1 YEAR",
+      "currencyCode": "EUR",
+      "minValue": 110000,
+      "maxValue": 185000
+     }
+    ]
+   }
+  },
+  {
+   "id": "86a60834-ba64-484d-9658-afa1bc97a957",
+   "title": "Mid Market Account Executive - EMEA (French Speaking)",
+   "department": "Sales",
+   "team": "Sales",
+   "employmentType": "FullTime",
+   "location": "France",
+   "shouldDisplayCompensationOnJobPostings": true,
+   "secondaryLocations": [
+    {
+     "location": "United Kingdom",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "United Kingdom",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Belgium",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Belgium",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Germany",
+     "address": {
+      "postalAddress": {
+       "addressCountry": "Germany",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Switzerland",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Switzerland",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Ireland",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Ireland",
+       "addressLocality": ""
+      }
+     }
+    },
+    {
+     "location": "Austria",
+     "address": {
+      "postalAddress": {
+       "addressCountry": "Austria"
+      }
+     }
+    },
+    {
+     "location": "Spain",
+     "address": {
+      "postalAddress": {
+       "addressCountry": "Spain"
+      }
+     }
+    },
+    {
+     "location": "Stuttgart",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "Baden-Wurttemberg",
+       "addressCountry": "Germany",
+       "addressLocality": "Stuttgart"
+      }
+     }
+    },
+    {
+     "location": "Berlin",
+     "address": {
+      "postalAddress": {
+       "addressRegion": "",
+       "addressCountry": "Germany",
+       "addressLocality": "Berlin"
+      }
+     }
+    }
+   ],
+   "publishedAt": "2026-07-17T17:45:27.827+00:00",
+   "isListed": true,
+   "isRemote": true,
+   "workplaceType": "Remote",
+   "address": {
+    "postalAddress": {
+     "addressRegion": "",
+     "addressCountry": "France",
+     "addressLocality": ""
+    }
+   },
+   "jobUrl": "https://jobs.ashbyhq.com/ashby/86a60834-ba64-484d-9658-afa1bc97a957",
+   "applyUrl": "https://jobs.ashbyhq.com/ashby/86a60834-ba64-484d-9658-afa1bc97a957/application",
+   "descriptionHtml": "<h2><strong>About Ashby</strong></h2><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">We’re building the next generation of enterprise software, starting with products that help talent leaders, recruiters, and managers unlock hiring excellence</p></li><li><p style=\"min-height:1.5em\">Series D raised in 2025, and growing ARR &gt;100% YoY</p></li><li><p style=\"min-height:1.5em\">Have thousands of amazing customers including OpenAI, Deliveroo, Lemonade &amp; Alan</p></li><li><p style=\"min-height:1.5em\">Multiple products to win both land-and-expand and material new business deals</p></li><li><p style=\"min-height:1.5em\">Rapidly moving up-market with no signs of slowing down</p></li><li><p style=\"min-height:1.5em\"><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.ashbyhq.com/blog/recruiting/ai-assisted-application-review-in-practice\"><u>Implemented assistive AI</u></a> throughout the platform</p></li><li><p style=\"min-height:1.5em\">Known for our pace of innovation and advanced analytics</p></li></ul><p style=\"min-height:1.5em\"></p><h2><strong>About this Role</strong></h2><p style=\"min-height:1.5em\">We are seeking a French-fluent Mid-Market Account Executive to help us win Mid-Market accounts (100-1k employees) by managing the full sales cycle from pipeline generation through to closed-won.</p><p style=\"min-height:1.5em\">In this role, you'll focus on new logo acquisition. Our emphasis is on your raw ability to excel in the areas listed below and your appetite for continuous growth &amp; improvement.</p><p style=\"min-height:1.5em\"></p><h3><strong>You could be a great fit if:</strong></h3><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">📣 You demonstrate mastery of clear communication. You ask questions with precision and can explain complex concepts in simple terms.</p></li><li><p style=\"min-height:1.5em\">💰 You have strong track record in Mid Market SaaS sales, having closed many $50k+ deals consistently. You have won competitive rip-and-replace opportunities of core/platform technologies.</p></li><li><p style=\"min-height:1.5em\">🎯 You are proactive in identifying and pursuing new business opportunities, and are comfortable sourcing &gt;50% of your own pipeline. You're both resourceful and innovative in finding new business opportunities.</p></li><li><p style=\"min-height:1.5em\">🤓 You love becoming a product and industry expert. You're adept at delivering a quick demo to showcase how your solution meets a unique need.</p></li><li><p style=\"min-height:1.5em\">⚔️ You're adept at competitive or evangelical selling in new or established markets.</p></li><li><p style=\"min-height:1.5em\">🎧 You're naturally curious about business problems and take pride in positioning specific &amp; creative solutions that solve those problems.</p></li><li><p style=\"min-height:1.5em\">🏔️ You skillfully guide prospects through the evaluation &amp; buying process—engaging the right stakeholders to create consensus for a strategic technology decision.</p></li><li><p style=\"min-height:1.5em\">⚡️ Your peers describe you as action-oriented and persistent. You're always on the leaderboard for outbound effort and pipeline created.</p></li><li><p style=\"min-height:1.5em\">⏱️ You leverage tools to maximize the impact of your prospecting and selling time. You believe in research and personalization to spark a conversation.</p></li><li><p style=\"min-height:1.5em\">⚙️ You are at home managing a pipeline of a dozen or more active opportunities concurrently. You take pride in internal operations, including real-time CRM updates.</p></li><li><p style=\"min-height:1.5em\">✈️ You are willing to travel at least 25% of the time for customer engagements and events.</p></li></ul><h3><strong>Requirements:</strong></h3><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">🤝 You have 2+ years of full-cycle closing experience and have closed many &gt;$50,000 ACV opportunities</p></li><li><p style=\"min-height:1.5em\">📢 You have experience selling complex platform technologies in a sales-led GTM motion</p></li><li><p style=\"min-height:1.5em\">📈 You are a new business hunter and are confident in your abilities to self-source &gt;50% of your own pipeline</p></li><li><p style=\"min-height:1.5em\">🌍 You have sold to multiple regions within EMEA and have strong written and verbal fluency in both English and French</p></li></ul><h3><strong>Bonus Points:</strong></h3><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">🤝 You have sold to Talent or HR personas</p></li><li><p style=\"min-height:1.5em\">☎️ Prior B/SDR experience</p></li></ul><p style=\"min-height:1.5em\"></p><h3><strong>You shouldn't apply if:</strong></h3><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">💼 You're more of a relationship builder who focuses on selling into the install base and aren't excited about a new business focused role.</p></li><li><p style=\"min-height:1.5em\">🎯 You expect Marketing or BDRs to source all of your pipeline for you. This is a hunting role.</p></li><li><p style=\"min-height:1.5em\">💻 You believe that \"tech stuff\" is the SE's job. Our AEs all develop product acumen while SEs are a partner in our team selling motion.</p></li><li><p style=\"min-height:1.5em\">📊 You prefer to run established playbooks in well defined environments. This role requires creativity and a growth mindset.</p></li><li><p style=\"min-height:1.5em\">🐺 You're a lone wolf. You prefer to go it alone in your pursuit of new business. We believe in a team-selling sales model.</p></li></ul><p style=\"min-height:1.5em\"></p><h2><strong>Our Philosophy</strong></h2><p style=\"min-height:1.5em\">Here are a few key points (relevant to the go-to-market side) that should give you an idea of what it is like to work with us:</p><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">We spend a lot of time building best-in-class products since we believe a highly differentiated product is easier to sell.</p></li><li><p style=\"min-height:1.5em\">We aim to offer deep product expertise whenever we interact with prospects and customers. AEs are no exception to this.</p></li><li><p style=\"min-height:1.5em\">We strongly believe that small teams with very talented people (and the right work environment) deliver much better performance than teams with large headcount. We hire and compensate accordingly.</p></li><li><p style=\"min-height:1.5em\">We value a strong sense of ownership, principled thinking over experience, and thoughtful communication.</p></li></ul><p style=\"min-height:1.5em\"></p><p style=\"min-height:1.5em\"><strong>Interview Process</strong></p><p style=\"min-height:1.5em\">Our interview process is designed so you can showcase your achievements and points of learning and apply those in a practical exercise. We'll provide you with Mid Market Account Executive info so you can develop a well informed perspective on our customer / sales motion. You’ll have opportunities to ask questions of our team throughout.</p><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\"><strong>Intro Call</strong> (30 min) - You'll meet with a Recruiter to discuss your fit for the role and address questions about our market and solution.</p></li><li><p style=\"min-height:1.5em\"><strong>Written Exercise - </strong>You'll complete a short take home assignment to showcase your outbound muscle.</p></li><li><p style=\"min-height:1.5em\"><strong>Experience Deep Dive </strong>(60 min) - You'll walk the Hiring Manager [<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.linkedin.com/in/stephanie-maclaurin/\"><u>Stephanie Maclaurin</u></a>] through your career journey in some detail to highlight your experience, achievements, and points of learning to understand how you've developed into the professional you are today.</p></li><li><p style=\"min-height:1.5em\"><strong>Challenge Interview</strong> (90 min) - This will be made up of two parts:</p><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">Discovery and Demo Role Play (60 min)</p></li><li><p style=\"min-height:1.5em\">Deal Strategy Discussion (30 min)</p></li></ul></li></ul><p style=\"min-height:1.5em\"></p><h2><strong>Benefits</strong></h2><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">Sell a product that our<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.ashbyhq.com/customers\"> <u>customers are truly excited about</u></a>.</p></li><li><p style=\"min-height:1.5em\">Fairly set, achievable quotas. Typically, greater than 65% of AEs are at or above quota.</p></li><li><p style=\"min-height:1.5em\">Unlimited PTO with four weeks recommended per year</p></li><li><p style=\"min-height:1.5em\">Generous equipment, software, and office furniture budget. Get what you need to be happy and productive!</p></li><li><p style=\"min-height:1.5em\"><em>10-year exercise window for stock options</em>. You shouldn’t feel pressure to purchase stock options if you leave Ashby —do it when you feel financially comfortable.</p></li><li><p style=\"min-height:1.5em\">￡/€100/month education budget with more expensive items (like conferences) covered with manager approval.</p></li><li><p style=\"min-height:1.5em\">Extended health benefits for you and your dependents (subject to availability with our Employer of Record)</p><p style=\"min-height:1.5em\"></p></li></ul><p style=\"min-height:1.5em\"><em>We're in the talent acquisition software business. We run the end-to-end hiring process through our own platform, and ensure a level playing field for all candidates. Reaching out to hiring managers or recruiters directly won't improve your odds of success. Please focus your energy on the quality of your application.</em></p><p style=\"min-height:1.5em\"><em>Ashby provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, religion, sex, national origin, age, disability, genetics, sexual orientation, gender identity, or gender expression. We are committed to a diverse and inclusive workforce and welcome people from all backgrounds, experiences, perspectives, and abilities.</em></p><p style=\"min-height:1.5em\"><em>Ashby is committed to a fair and transparent hiring process. We confirm that this advertisement is for an active, existing vacancy within our organization. Please be advised that we may use artificial intelligence-driven tools to assist our recruitment team in screening, assessing, and selecting candidates for this position.</em></p>",
+   "descriptionPlain": "ABOUT ASHBY\n\n - We’re building the next generation of enterprise software, starting with products that help talent leaders, recruiters, and managers unlock hiring excellence\n\n - Series D raised in 2025, and growing ARR >100% YoY\n\n - Have thousands of amazing customers including OpenAI, Deliveroo, Lemonade & Alan\n\n - Multiple products to win both land-and-expand and material new business deals\n\n - Rapidly moving up-market with no signs of slowing down\n\n - Implemented assistive AI https://www.ashbyhq.com/blog/recruiting/ai-assisted-application-review-in-practice throughout the platform\n\n - Known for our pace of innovation and advanced analytics\n\n\n\n\nABOUT THIS ROLE\n\nWe are seeking a French-fluent Mid-Market Account Executive to help us win Mid-Market accounts (100-1k employees) by managing the full sales cycle from pipeline generation through to closed-won.\n\nIn this role, you'll focus on new logo acquisition. Our emphasis is on your raw ability to excel in the areas listed below and your appetite for continuous growth & improvement.\n\n\n\n\nYOU COULD BE A GREAT FIT IF:\n\n - 📣 You demonstrate mastery of clear communication. You ask questions with precision and can explain complex concepts in simple terms.\n\n - 💰 You have strong track record in Mid Market SaaS sales, having closed many $50k+ deals consistently. You have won competitive rip-and-replace opportunities of core/platform technologies.\n\n - 🎯 You are proactive in identifying and pursuing new business opportunities, and are comfortable sourcing >50% of your own pipeline. You're both resourceful and innovative in finding new business opportunities.\n\n - 🤓 You love becoming a product and industry expert. You're adept at delivering a quick demo to showcase how your solution meets a unique need.\n\n - ⚔️ You're adept at competitive or evangelical selling in new or established markets.\n\n - 🎧 You're naturally curious about business problems and take pride in positioning specific & creative solutions that solve those problems.\n\n - 🏔️ You skillfully guide prospects through the evaluation & buying process—engaging the right stakeholders to create consensus for a strategic technology decision.\n\n - ⚡️ Your peers describe you as action-oriented and persistent. You're always on the leaderboard for outbound effort and pipeline created.\n\n - ⏱️ You leverage tools to maximize the impact of your prospecting and selling time. You believe in research and personalization to spark a conversation.\n\n - ⚙️ You are at home managing a pipeline of a dozen or more active opportunities concurrently. You take pride in internal operations, including real-time CRM updates.\n\n - ✈️ You are willing to travel at least 25% of the time for customer engagements and events.\n\n\nREQUIREMENTS:\n\n - 🤝 You have 2+ years of full-cycle closing experience and have closed many >$50,000 ACV opportunities\n\n - 📢 You have experience selling complex platform technologies in a sales-led GTM motion\n\n - 📈 You are a new business hunter and are confident in your abilities to self-source >50% of your own pipeline\n\n - 🌍 You have sold to multiple regions within EMEA and have strong written and verbal fluency in both English and French\n\n\nBONUS POINTS:\n\n - 🤝 You have sold to Talent or HR personas\n\n - ☎️ Prior B/SDR experience\n\n\n\n\nYOU SHOULDN'T APPLY IF:\n\n - 💼 You're more of a relationship builder who focuses on selling into the install base and aren't excited about a new business focused role.\n\n - 🎯 You expect Marketing or BDRs to source all of your pipeline for you. This is a hunting role.\n\n - 💻 You believe that \"tech stuff\" is the SE's job. Our AEs all develop product acumen while SEs are a partner in our team selling motion.\n\n - 📊 You prefer to run established playbooks in well defined environments. This role requires creativity and a growth mindset.\n\n - 🐺 You're a lone wolf. You prefer to go it alone in your pursuit of new business. We believe in a team-selling sales model.\n\n\n\n\nOUR PHILOSOPHY\n\nHere are a few key points (relevant to the go-to-market side) that should give you an idea of what it is like to work with us:\n\n - We spend a lot of time building best-in-class products since we believe a highly differentiated product is easier to sell.\n\n - We aim to offer deep product expertise whenever we interact with prospects and customers. AEs are no exception to this.\n\n - We strongly believe that small teams with very talented people (and the right work environment) deliver much better performance than teams with large headcount. We hire and compensate accordingly.\n\n - We value a strong sense of ownership, principled thinking over experience, and thoughtful communication.\n\n\n\nInterview Process\n\nOur interview process is designed so you can showcase your achievements and points of learning and apply those in a practical exercise. We'll provide you with Mid Market Account Executive info so you can develop a well informed perspective on our customer / sales motion. You’ll have opportunities to ask questions of our team throughout.\n\n - Intro Call (30 min) - You'll meet with a Recruiter to discuss your fit for the role and address questions about our market and solution.\n\n - Written Exercise - You'll complete a short take home assignment to showcase your outbound muscle.\n\n - Experience Deep Dive (60 min) - You'll walk the Hiring Manager [Stephanie Maclaurin https://www.linkedin.com/in/stephanie-maclaurin/] through your career journey in some detail to highlight your experience, achievements, and points of learning to understand how you've developed into the professional you are today.\n\n - Challenge Interview (90 min) - This will be made up of two parts:\n   \n   - Discovery and Demo Role Play (60 min)\n   \n   - Deal Strategy Discussion (30 min)\n\n\n\n\nBENEFITS\n\n - Sell a product that our customers are truly excited about https://www.ashbyhq.com/customers.\n\n - Fairly set, achievable quotas. Typically, greater than 65% of AEs are at or above quota.\n\n - Unlimited PTO with four weeks recommended per year\n\n - Generous equipment, software, and office furniture budget. Get what you need to be happy and productive!\n\n - 10-year exercise window for stock options. You shouldn’t feel pressure to purchase stock options if you leave Ashby —do it when you feel financially comfortable.\n\n - ￡/€100/month education budget with more expensive items (like conferences) covered with manager approval.\n\n - Extended health benefits for you and your dependents (subject to availability with our Employer of Record)\n   \n   \n\nWe're in the talent acquisition software business. We run the end-to-end hiring process through our own platform, and ensure a level playing field for all candidates. Reaching out to hiring managers or recruiters directly won't improve your odds of success. Please focus your energy on the quality of your application.\n\nAshby provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, religion, sex, national origin, age, disability, genetics, sexual orientation, gender identity, or gender expression. We are committed to a diverse and inclusive workforce and welcome people from all backgrounds, experiences, perspectives, and abilities.\n\nAshby is committed to a fair and transparent hiring process. We confirm that this advertisement is for an active, existing vacancy within our organization. Please be advised that we may use artificial intelligence-driven tools to assist our recruitment team in screening, assessing, and selecting candidates for this position.",
+   "compensation": {
+    "compensationTierSummary": "€110K – €195.5K • Offers Equity • Offers Commission • Multiple Ranges",
+    "scrapeableCompensationSalarySummary": "€110K - €195.5K",
+    "compensationTiers": [
+     {
+      "id": "578bf152-5d8a-48d4-8fc5-658664165b71",
+      "tierSummary": "OTE €144.5K – €195.5K • Offers Equity • Offers Commission",
+      "title": "EMEA Tier 1 - Remote",
+      "additionalInformation": null,
+      "components": [
+       {
+        "id": "3376fe86-7d18-47ef-acf7-0da9f67d78bc",
+        "summary": "Offers Equity",
+        "compensationType": "EquityPercentage",
+        "interval": "NONE",
+        "currencyCode": null,
+        "minValue": null,
+        "maxValue": null
+       },
+       {
+        "id": "659f2f29-2e52-4d0c-8b4c-51727268a659",
+        "summary": "Offers Commission",
+        "compensationType": "Commission",
+        "interval": "1 YEAR",
+        "currencyCode": "EUR",
+        "minValue": null,
+        "maxValue": null
+       },
+       {
+        "id": "5b09c7b6-efde-4f66-85f6-ecb6cfe29980",
+        "summary": "OTE €144.5K – €195.5K",
+        "compensationType": "Salary",
+        "interval": "1 YEAR",
+        "currencyCode": "EUR",
+        "minValue": 144500,
+        "maxValue": 195500
+       }
+      ]
+     },
+     {
+      "id": "dd41799a-43df-449c-ac68-fd6044ced3d3",
+      "tierSummary": "OTE €127.5K – €172.5K • Offers Equity • Offers Commission",
+      "title": "EMEA Tier 2 - Remote",
+      "additionalInformation": null,
+      "components": [
+       {
+        "id": "a7d5af1a-2692-4e9d-96f4-4e5267dab1a0",
+        "summary": "Offers Commission",
+        "compensationType": "Commission",
+        "interval": "1 YEAR",
+        "currencyCode": "EUR",
+        "minValue": null,
+        "maxValue": null
+       },
+       {
+        "id": "77245e6e-9a5c-4511-8667-13b4e072944e",
+        "summary": "Offers Equity",
+        "compensationType": "EquityPercentage",
+        "interval": "NONE",
+        "currencyCode": null,
+        "minValue": null,
+        "maxValue": null
+       },
+       {
+        "id": "47ae4a45-026a-45b9-b857-96fbc74a28b6",
+        "summary": "OTE €127.5K – €172.5K",
+        "compensationType": "Salary",
+        "interval": "1 YEAR",
+        "currencyCode": "EUR",
+        "minValue": 127500,
+        "maxValue": 172500
+       }
+      ]
+     },
+     {
+      "id": "238f8e26-e75c-4ad6-910f-90127a2a9619",
+      "tierSummary": "OTE €110K – €149.5K • Offers Equity • Offers Commission",
+      "title": "EMEA Tier 3 - Remote",
+      "additionalInformation": null,
+      "components": [
+       {
+        "id": "692a5c75-70ee-4bfb-81da-d20a5eb9a63f",
+        "summary": "Offers Equity",
+        "compensationType": "EquityPercentage",
+        "interval": "NONE",
+        "currencyCode": null,
+        "minValue": null,
+        "maxValue": null
+       },
+       {
+        "id": "85eeb725-0cd4-463e-af57-6505a6fbc78c",
+        "summary": "OTE €110K – €149.5K",
+        "compensationType": "Salary",
+        "interval": "1 YEAR",
+        "currencyCode": "EUR",
+        "minValue": 110000,
+        "maxValue": 149500
+       },
+       {
+        "id": "b8121303-1856-416c-882b-2ae3e5b41b95",
+        "summary": "Offers Commission",
+        "compensationType": "Commission",
+        "interval": "1 YEAR",
+        "currencyCode": "EUR",
+        "minValue": null,
+        "maxValue": null
+       }
+      ]
+     },
+     {
+      "id": "9ea38d26-3c52-4b8e-b8bf-6537c71dd8d6",
+      "tierSummary": "OTE £144.5K – £195.5K • Offers Equity • Offers Commission",
+      "title": "UK Tier 1 - Remote",
+      "additionalInformation": null,
+      "components": [
+       {
+        "id": "9a8abd06-5486-4818-9804-54ac60bbb87a",
+        "summary": "Offers Equity",
+        "compensationType": "EquityPercentage",
+        "interval": "NONE",
+        "currencyCode": null,
+        "minValue": null,
+        "maxValue": null
+       },
+       {
+        "id": "e19ba716-cd5d-4b92-8343-7a70141546cc",
+        "summary": "Offers Commission",
+        "compensationType": "Commission",
+        "interval": "1 YEAR",
+        "currencyCode": "GBP",
+        "minValue": null,
+        "maxValue": null
+       },
+       {
+        "id": "c2900ca4-73d0-4d4e-b247-687d70ef0273",
+        "summary": "OTE £144.5K – £195.5K",
+        "compensationType": "Salary",
+        "interval": "1 YEAR",
+        "currencyCode": "GBP",
+        "minValue": 144500,
+        "maxValue": 195500
+       }
+      ]
+     },
+     {
+      "id": "d1411b81-f2c3-487e-baf9-e70f37d91ac1",
+      "tierSummary": "OTE £127.5K – £172.5K • Offers Equity • Offers Commission",
+      "title": "UK Tier 2 - Remote",
+      "additionalInformation": null,
+      "components": [
+       {
+        "id": "f101a32a-537d-408b-b7bf-f945cfb2f906",
+        "summary": "Offers Commission",
+        "compensationType": "Commission",
+        "interval": "1 YEAR",
+        "currencyCode": "GBP",
+        "minValue": null,
+        "maxValue": null
+       },
+       {
+        "id": "6c767299-d44d-48fb-856e-bc89e7e9bc22",
+        "summary": "OTE £127.5K – £172.5K",
+        "compensationType": "Salary",
+        "interval": "1 YEAR",
+        "currencyCode": "GBP",
+        "minValue": 127500,
+        "maxValue": 172500
+       },
+       {
+        "id": "617c392f-dfba-4f15-becd-4caf1584eda3",
+        "summary": "Offers Equity",
+        "compensationType": "EquityPercentage",
+        "interval": "NONE",
+        "currencyCode": null,
+        "minValue": null,
+        "maxValue": null
+       }
+      ]
+     }
+    ],
+    "summaryComponents": [
+     {
+      "compensationType": "EquityPercentage",
+      "minValue": null,
+      "maxValue": null,
+      "interval": "1 YEAR"
+     },
+     {
+      "compensationType": "Commission",
+      "minValue": null,
+      "maxValue": null,
+      "interval": "1 YEAR"
+     },
+     {
+      "minValue": 110000,
+      "maxValue": 195500,
+      "currencyCode": "EUR",
+      "interval": "1 YEAR",
+      "compensationType": "Salary"
+     }
+    ]
+   }
+  }
+ ],
+ "apiVersion": "1"
+}

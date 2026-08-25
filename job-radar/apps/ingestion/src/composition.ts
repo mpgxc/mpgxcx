@@ -3,12 +3,20 @@ import { S3Client } from "@aws-sdk/client-s3";
 import { SQSClient } from "@aws-sdk/client-sqs";
 import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 import {
+  AshbyAdapter,
+  AshbyClient,
   CircuitBreaker,
   GreenhouseAdapter,
   GreenhouseClient,
   GupyAdapter,
   GupyClient,
   HttpClient,
+  LeverAdapter,
+  LeverClient,
+  SmartRecruitersAdapter,
+  SmartRecruitersClient,
+  WorkableAdapter,
+  WorkableClient,
 } from "@job-radar/adapters";
 import {
   DiscoverSourceWorkUseCase,
@@ -90,7 +98,39 @@ export function buildContainer(): Container {
     ),
   );
 
-  const catalog = new SourceCatalog([gupy, greenhouse]);
+  const lever = new LeverAdapter(
+    new LeverClient(http, new CircuitBreaker("lever", { failureThreshold: 5, cooldownMs: 30_000 })),
+  );
+
+  const ashby = new AshbyAdapter(
+    new AshbyClient(http, new CircuitBreaker("ashby", { failureThreshold: 5, cooldownMs: 30_000 })),
+  );
+
+  /**
+   * O Workable é o único com política diferente, e a diferença foi medida, não
+   * escolhida por gosto: o endpoint fica atrás de Cloudflare com limite por IP,
+   * e ~10 requisições em poucos minutos já devolvem HTTP 429 com
+   * `retry-after` de mais de seis horas. Com o limiar padrão de 5, o breaker
+   * gastaria cinco tarefas da rodada só para descobrir um bloqueio que a
+   * primeira resposta já anunciou. Abrir na terceira falha e esperar cinco
+   * minutos corta o desperdício sem mudar o desfecho — a rodada fica
+   * incompleta de qualquer jeito, e é isso que impede o sweeper de expirar.
+   */
+  const workable = new WorkableAdapter(
+    new WorkableClient(
+      http,
+      new CircuitBreaker("workable", { failureThreshold: 3, cooldownMs: 300_000 }),
+    ),
+  );
+
+  const smartrecruiters = new SmartRecruitersAdapter(
+    new SmartRecruitersClient(
+      http,
+      new CircuitBreaker("smartrecruiters", { failureThreshold: 5, cooldownMs: 30_000 }),
+    ),
+  );
+
+  const catalog = new SourceCatalog([gupy, greenhouse, lever, ashby, workable, smartrecruiters]);
 
   const registry = new DynamoSourceRegistry(dynamo, config.tableName);
   const runs = new DynamoRunRegistry(dynamo, config.tableName);

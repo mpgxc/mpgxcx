@@ -1,0 +1,14 @@
+{
+  "offset": 0,
+  "limit": 100,
+  "content": [
+    {
+      "id": "744000143115219",
+      "name": "Senior Information Security Engineer",
+      "company": { "identifier": "smartrecruiters", "name": "SmartRecruiters Inc" },
+      "releasedDate": "2026-08-12T14:04:56.128Z",
+      "location": { "city": "Poland", "region": "REMOTE", "country": "pl", "remote": true, "hybrid": false, "fullLocation": "Poland, REMOTE, Poland" },
+      "typeOfEmployment": { "id": "permanent", "label": "Full-time" }
+    }
+  ]
+}
