@@ -1,0 +1,18 @@
+{
+  "jobs": [
+    {
+      "id": "7458d4e9-da2e-47bd-98cb-adfda43d42b2",
+      "title": "Engineering Manager - EU",
+      "employmentType": "FullTime",
+      "location": "Remote - European Union",
+      "secondaryLocations": [],
+      "publishedAt": "2024-03-04T14:29:08.532+00:00",
+      "isListed": true,
+      "isRemote": true,
+      "workplaceType": "Remote",
+      "jobUrl": "https://jobs.ashbyhq.com/ashby/7458d4e9-da2e-47bd-98cb-adfda43d42b2",
+      "descriptionHtml": "<p>Deformado de propósito: falta a chave `compensation`.</p>"
+    }
+  ],
+  "apiVersion": "1"
+}

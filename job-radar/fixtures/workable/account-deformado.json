@@ -1,0 +1,20 @@
+{
+  "name": "Blueground",
+  "description": "<p>Descrição da EMPRESA — não é a da vaga.</p>",
+  "jobs": [
+    {
+      "title": "Full-Stack Software Engineer",
+      "shortcode": "0FD01ABC66",
+      "code": "",
+      "employment_type": "Full-time",
+      "telecommuting": false,
+      "department": "Engineering",
+      "url": "https://apply.workable.com/j/0FD01ABC66",
+      "published_on": "2026-08-18",
+      "country": "Greece",
+      "city": "Athens",
+      "state": "Attica",
+      "locations": [{ "country": "Greece", "countryCode": "GR", "city": "Athens" }]
+    }
+  ]
+}
