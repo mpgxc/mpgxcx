@@ -4,6 +4,7 @@
     { "path": "./packages/core" },
     { "path": "./packages/adapters" },
     { "path": "./packages/infra-aws" },
-    { "path": "./apps/ingestion" }
+    { "path": "./apps/ingestion" },
+    { "path": "./apps/api" }
   ]
 }

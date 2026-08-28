@@ -6,6 +6,7 @@
   "exports": {
     ".": "./src/index.ts",
     "./commons": "./src/commons/index.ts",
-    "./ingestion": "./src/contexts/ingestion/index.ts"
+    "./ingestion": "./src/contexts/ingestion/index.ts",
+    "./search": "./src/contexts/search/index.ts"
   }
 }

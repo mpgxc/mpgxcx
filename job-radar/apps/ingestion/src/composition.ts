@@ -22,6 +22,7 @@ import {
   DiscoverSourceWorkUseCase,
   FetchSourceBatchUseCase,
   NormalizeAndStoreUseCase,
+  ProjectJobChangesUseCase,
   type RunRegistry,
   SourceCatalog,
   type SourceRegistry,
@@ -33,10 +34,12 @@ import {
   DynamoRunRegistry,
   DynamoSourceRegistry,
   Logger,
+  OpenSearchClient,
+  OpenSearchJobIndex,
   S3RawStorage,
   SqsWorkQueue,
 } from "@job-radar/infra-aws";
-import { type AppConfig, loadConfig } from "./config.js";
+import { type AppConfig, loadConfig, loadProjectorConfig, type ProjectorConfig } from "./config.js";
 
 /**
  * Composition root manual.
@@ -151,4 +154,40 @@ export function buildContainer(): Container {
   };
 
   return cached;
+}
+
+/**
+ * Container do projetor.
+ *
+ * Segundo composition root no mesmo app, e é o desenho certo: o trabalho de um
+ * composition root é saber exatamente do que UM ponto de entrada precisa. O
+ * projetor não fala com fonte, nem com S3, nem com fila — juntá-lo ao container
+ * da coleta faria toda Lambda de ingestão carregar (e exigir a configuração de)
+ * um cliente de OpenSearch que ela nunca usa.
+ */
+export interface ProjectorContainer {
+  readonly config: ProjectorConfig;
+  readonly logger: Logger;
+  readonly projectJobChanges: ProjectJobChangesUseCase;
+}
+
+let cachedProjector: ProjectorContainer | null = null;
+
+export function buildProjectorContainer(): ProjectorContainer {
+  if (cachedProjector) return cachedProjector;
+
+  const config = loadProjectorConfig();
+
+  cachedProjector = {
+    config,
+    logger: new Logger("job-radar-projector"),
+    projectJobChanges: new ProjectJobChangesUseCase(
+      new OpenSearchJobIndex(
+        new OpenSearchClient({ endpoint: config.searchEndpoint, region: config.region }),
+        config.searchIndex,
+      ),
+    ),
+  };
+
+  return cachedProjector;
 }
