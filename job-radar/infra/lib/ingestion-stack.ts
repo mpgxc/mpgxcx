@@ -45,6 +45,15 @@ export interface IngestionStackProps extends StackProps {
 }
 
 export class IngestionStack extends Stack {
+  /**
+   * A tabela é pública porque a `SearchStack` precisa dela: o projetor lê o
+   * Stream, e a direção da dependência tem que ser essa — a busca depende do
+   * catálogo, nunca o contrário. O `Export`/`ImportValue` que o CDK gera com
+   * isso impede excluir a TABELA enquanto a busca a importa, que é exatamente
+   * a proteção que se quer; destruir a stack de busca continua livre.
+   */
+  readonly table: dynamodb.TableV2;
+
   constructor(scope: Construct, id: string, props: IngestionStackProps = {}) {
     super(scope, id, props);
 
@@ -68,6 +77,8 @@ export class IngestionStack extends Stack {
       ],
       removalPolicy: RemovalPolicy.RETAIN,
     });
+
+    this.table = table;
 
     const rawBucket = new s3.Bucket(this, "RawBucket", {
       encryption: s3.BucketEncryption.S3_MANAGED,

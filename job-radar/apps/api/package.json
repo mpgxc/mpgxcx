@@ -1,0 +1,13 @@
+{
+  "name": "@job-radar/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@job-radar/core": "workspace:*",
+    "@job-radar/infra-aws": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.162"
+  }
+}
