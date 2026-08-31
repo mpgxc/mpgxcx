@@ -30,3 +30,28 @@ export function loadConfig(): AppConfig {
     httpTimeoutMs: Number(process.env.HTTP_TIMEOUT_MS ?? 15_000),
   };
 }
+
+/**
+ * Configuração do projetor — separada de propósito.
+ *
+ * O projetor NÃO precisa de bucket raw nem das URLs das filas, e exigi-los só
+ * para ele subir seria mentir sobre a dependência. Mas a razão de verdade é
+ * outra, e é estrutural: a coleção de busca é criada na `SearchStack`, que
+ * depende da `IngestionStack` por causa da tabela. Se as Lambdas de ingestão
+ * exigissem `SEARCH_ENDPOINT`, a dependência entre as stacks fecharia um
+ * ciclo, e o CloudFormation recusa o deploy inteiro.
+ */
+export interface ProjectorConfig {
+  readonly searchEndpoint: string;
+  readonly searchIndex: string;
+  readonly region: string;
+}
+
+export function loadProjectorConfig(): ProjectorConfig {
+  return {
+    searchEndpoint: required("SEARCH_ENDPOINT"),
+    searchIndex: process.env.SEARCH_INDEX ?? "jobs",
+    // O runtime da Lambda sempre define AWS_REGION; o padrão cobre execução local.
+    region: process.env.AWS_REGION ?? "us-east-1",
+  };
+}

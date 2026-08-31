@@ -13,9 +13,31 @@ import type { FetchTask } from "@job-radar/core";
  *
  * GSI1 (sweeper de expiração): SRC#<sourceId>#<status> / <lastSeenAt>
  */
+const JOB_PK_PREFIX = "JOB#";
+const JOB_SK = "JOB";
+
 export const TABLE_KEYS = {
   job(jobId: string) {
-    return { pk: `JOB#${jobId}`, sk: "JOB" };
+    return { pk: `${JOB_PK_PREFIX}${jobId}`, sk: JOB_SK };
+  },
+
+  /**
+   * Reconhece a chave de uma vaga a partir do que o Stream entrega.
+   *
+   * O Stream carrega TODOS os itens da tabela única — cache de fetch, registro
+   * de fontes, placar de rodada, ponteiro de última rodada — e num evento
+   * REMOVE só as chaves chegam, sem `entity`. Então a identificação tem que
+   * caber na chave, e é aqui que ela mora: quem consome o Stream não
+   * reimplementa o prefixo.
+   */
+  isJobKey(keys: Record<string, unknown> | undefined): boolean {
+    const pk = keys?.pk;
+    return typeof pk === "string" && pk.startsWith(JOB_PK_PREFIX) && keys?.sk === JOB_SK;
+  },
+
+  /** Só faz sentido sobre uma chave que passou por `isJobKey`. */
+  jobIdFromKey(keys: Record<string, unknown>): string {
+    return String(keys.pk).slice(JOB_PK_PREFIX.length);
   },
 
   sourcesPartition: "SOURCES",

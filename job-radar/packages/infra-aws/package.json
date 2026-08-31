@@ -7,10 +7,15 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
+    "@aws-crypto/sha256-js": "^5.2.0",
     "@aws-sdk/client-dynamodb": "^3.1096.0",
     "@aws-sdk/client-s3": "^3.1096.0",
     "@aws-sdk/client-sqs": "^3.1096.0",
+    "@aws-sdk/credential-provider-node": "^3.972.81",
     "@aws-sdk/lib-dynamodb": "^3.1096.0",
-    "@job-radar/core": "workspace:*"
+    "@aws-sdk/util-dynamodb": "^3.996.7",
+    "@job-radar/core": "workspace:*",
+    "@smithy/protocol-http": "^5.6.2",
+    "@smithy/signature-v4": "^5.7.3"
   }
 }
